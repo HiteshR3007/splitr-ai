@@ -9,7 +9,7 @@ export default function Home() {
       <br/>
       HARE KRISHNA 
       <br/>
-      <Button variant="destructive">HARI</Button>
+      <Button onClick={bc} variant="destructive">HARI</Button>
     </div>
   );
 }
