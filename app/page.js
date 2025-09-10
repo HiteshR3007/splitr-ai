@@ -6,10 +6,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div> 
-      <br/>
       HARE KRISHNA 
-      <br/>
-      <Button onClick={bc} variant="destructive">HARI</Button>
     </div>
   );
 }

@@ -1,9 +1,25 @@
 "use client";
-import React from 'react'
+import React from 'react';
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <SignedOut>
+        <SignInButton />
+        <SignUpButton/>
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+    </div>
   )
 }
 
