@@ -15,28 +15,6 @@ export default defineSchema({
 
     // Expenses
     expenses: defineTable({
-        description: v.string(),
-        amount: v.number(),
-        category: v.optional(v.string()),
-        date: v.number(), // timestamp
-        paidByUserId: v.id("users"), // Reference to users table
-        splitType: v.string(), // "equal", "percentage", "exact"
-        splits: v.array(
-            v.object({
-                userId: v.id("users"), // Reference to users table
-                amount: v.number(), // amount owed by this user
-                paid: v.boolean(),
-            })
-        ),
-        groupId: v.optional(v.id("groups")), // null for one-on-one expenses
-        createdBy: v.id("users"), // Reference to users table
-    })
-    .index("by_group", ["groupId"])
-    .index("by_user_and_group", ["paidByUserId", "groupId"])
-    .index("by_date", ["date"]),
-
-    // Expenses
-    expenses: defineTable({
     description: v.string(),
     amount: v.number(),
     category: v.optional(v.string()),
