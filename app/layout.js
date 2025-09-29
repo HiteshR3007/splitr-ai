@@ -25,8 +25,8 @@ export default function RootLayout({ children }) {
           <ConvexClientProvider>
             <Header />
             <main className="min-h-screen">
-              <Toaster richColors />
               {children}
+              <Toaster richColors />
             </main> 
           </ConvexClientProvider>
       </body>
