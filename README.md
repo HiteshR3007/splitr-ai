@@ -1,5 +1,7 @@
 
+### Make sure to create a `.env` file with following variables -
 
+```
 # Deployment used by `npx convex dev`
 CONVEX_DEPLOYMENT=
 
@@ -16,3 +18,4 @@ CLERK_JWT_ISSUER_DOMAIN=
 RESEND_API_KEY=
 
 GEMINI_API_KEY=
+```
